@@ -73,8 +73,8 @@ const verifyCoupons = async (coupons) => {
   });
   global.AppLog.log("login page");
 
-  await page.type('input[type="email"]', "aman.kroolgrabstarz@gmail.com");
-  await page.type('input[type="password"]',"E7!mvXKg");
+  await page.type('input[type="email"]', process.env.USER_NAME);
+  await page.type('input[type="password"]', process.env.PASSWORD);
   await page.click('button.she-btn-black.she-btn-l.she-btn-block');
   await page.waitForNavigation();
 
