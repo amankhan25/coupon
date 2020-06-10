@@ -83,8 +83,8 @@ const verifyCoupons = async (coupons) => {
   await page.goto(listPage, {
     waitUntil: 'networkidle2'
   });
+  
   global.AppLog.log("open list page");
-
   //get 3 product from page list
   const productUrls = await page.evaluate((CART_ITEM_LIMIT) => {
     let urls = [];
