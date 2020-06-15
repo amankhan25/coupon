@@ -52,8 +52,6 @@ async function applyCoupon(page, couponCode) {
 
   ///////////////////////////////ResetButton/////////////////////////////////
   global.AppLog.log("message", message);
-
-
   await Helper.delayPromise(1000);
   return {
     store_name: STORE_NAME,
@@ -156,7 +154,7 @@ const verifyCoupons = async (coupons) => {
     response.push(await applyCoupon(page, coupons[i]));
     global.AppLog.log("done coupon", coupons[i]);
   }
-  
+
   await browser.close();
   return response;
 
